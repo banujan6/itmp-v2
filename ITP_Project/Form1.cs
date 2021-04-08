@@ -22,5 +22,11 @@ namespace ITP_Project
             add_working_hours_days_window workingHoursWindow = new add_working_hours_days_window();
             workingHoursWindow.ShowDialog();
         }
+
+        private void btn_manage_taglist_Click(object sender, EventArgs e)
+        {
+            Add_Tags tagWindow = new Add_Tags();
+            tagWindow.ShowDialog();
+        }
     }
 }

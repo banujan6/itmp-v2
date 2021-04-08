@@ -48,10 +48,11 @@ namespace ITP_Project
             this.btn_working_schedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_working_schedule.Image = ((System.Drawing.Image)(resources.GetObject("btn_working_schedule.Image")));
             this.btn_working_schedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_working_schedule.Location = new System.Drawing.Point(492, 201);
+            this.btn_working_schedule.Location = new System.Drawing.Point(492, 161);
+            this.btn_working_schedule.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_working_schedule.Name = "btn_working_schedule";
             this.btn_working_schedule.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn_working_schedule.Size = new System.Drawing.Size(218, 58);
+            this.btn_working_schedule.Size = new System.Drawing.Size(218, 46);
             this.btn_working_schedule.TabIndex = 0;
             this.btn_working_schedule.Text = "Working Schedule";
             this.btn_working_schedule.UseVisualStyleBackColor = false;
@@ -63,10 +64,11 @@ namespace ITP_Project
             this.btn_manage_locations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_manage_locations.Image = ((System.Drawing.Image)(resources.GetObject("btn_manage_locations.Image")));
             this.btn_manage_locations.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_manage_locations.Location = new System.Drawing.Point(745, 201);
+            this.btn_manage_locations.Location = new System.Drawing.Point(745, 161);
+            this.btn_manage_locations.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_manage_locations.Name = "btn_manage_locations";
             this.btn_manage_locations.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn_manage_locations.Size = new System.Drawing.Size(218, 58);
+            this.btn_manage_locations.Size = new System.Drawing.Size(218, 46);
             this.btn_manage_locations.TabIndex = 1;
             this.btn_manage_locations.Text = "Manage Locations";
             this.btn_manage_locations.UseVisualStyleBackColor = false;
@@ -77,10 +79,11 @@ namespace ITP_Project
             this.btn_manage_students.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_manage_students.Image = ((System.Drawing.Image)(resources.GetObject("btn_manage_students.Image")));
             this.btn_manage_students.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_manage_students.Location = new System.Drawing.Point(745, 293);
+            this.btn_manage_students.Location = new System.Drawing.Point(745, 234);
+            this.btn_manage_students.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_manage_students.Name = "btn_manage_students";
             this.btn_manage_students.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn_manage_students.Size = new System.Drawing.Size(218, 58);
+            this.btn_manage_students.Size = new System.Drawing.Size(218, 46);
             this.btn_manage_students.TabIndex = 3;
             this.btn_manage_students.Text = "Manage Students";
             this.btn_manage_students.UseVisualStyleBackColor = false;
@@ -91,10 +94,11 @@ namespace ITP_Project
             this.btn_manage_lectures.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_manage_lectures.Image = ((System.Drawing.Image)(resources.GetObject("btn_manage_lectures.Image")));
             this.btn_manage_lectures.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_manage_lectures.Location = new System.Drawing.Point(492, 293);
+            this.btn_manage_lectures.Location = new System.Drawing.Point(492, 234);
+            this.btn_manage_lectures.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_manage_lectures.Name = "btn_manage_lectures";
             this.btn_manage_lectures.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn_manage_lectures.Size = new System.Drawing.Size(218, 58);
+            this.btn_manage_lectures.Size = new System.Drawing.Size(218, 46);
             this.btn_manage_lectures.TabIndex = 2;
             this.btn_manage_lectures.Text = "Manage Lecturers";
             this.btn_manage_lectures.UseVisualStyleBackColor = false;
@@ -105,10 +109,11 @@ namespace ITP_Project
             this.btn_manage_subjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_manage_subjects.Image = ((System.Drawing.Image)(resources.GetObject("btn_manage_subjects.Image")));
             this.btn_manage_subjects.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_manage_subjects.Location = new System.Drawing.Point(745, 385);
+            this.btn_manage_subjects.Location = new System.Drawing.Point(745, 308);
+            this.btn_manage_subjects.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_manage_subjects.Name = "btn_manage_subjects";
             this.btn_manage_subjects.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn_manage_subjects.Size = new System.Drawing.Size(218, 58);
+            this.btn_manage_subjects.Size = new System.Drawing.Size(218, 46);
             this.btn_manage_subjects.TabIndex = 5;
             this.btn_manage_subjects.Text = "Manage Subjects";
             this.btn_manage_subjects.UseVisualStyleBackColor = false;
@@ -119,20 +124,23 @@ namespace ITP_Project
             this.btn_manage_taglist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_manage_taglist.Image = ((System.Drawing.Image)(resources.GetObject("btn_manage_taglist.Image")));
             this.btn_manage_taglist.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_manage_taglist.Location = new System.Drawing.Point(492, 385);
+            this.btn_manage_taglist.Location = new System.Drawing.Point(492, 308);
+            this.btn_manage_taglist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_manage_taglist.Name = "btn_manage_taglist";
             this.btn_manage_taglist.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn_manage_taglist.Size = new System.Drawing.Size(218, 58);
+            this.btn_manage_taglist.Size = new System.Drawing.Size(218, 46);
             this.btn_manage_taglist.TabIndex = 4;
             this.btn_manage_taglist.Text = "Manage Taglist";
             this.btn_manage_taglist.UseVisualStyleBackColor = false;
+            this.btn_manage_taglist.Click += new System.EventHandler(this.btn_manage_taglist_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(449, 561);
+            this.pictureBox1.Size = new System.Drawing.Size(449, 449);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -142,11 +150,11 @@ namespace ITP_Project
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label2.Location = new System.Drawing.Point(492, 48);
+            this.label2.Location = new System.Drawing.Point(492, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(351, 31);
+            this.label2.Size = new System.Drawing.Size(373, 32);
             this.label2.TabIndex = 8;
             this.label2.Text = "Timetable Management System";
             // 
@@ -154,21 +162,21 @@ namespace ITP_Project
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label1.Location = new System.Drawing.Point(493, 84);
+            this.label1.Location = new System.Drawing.Point(493, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 25);
+            this.label1.Size = new System.Drawing.Size(120, 25);
             this.label1.TabIndex = 9;
             this.label1.Text = "Version 1.0.0";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1012, 561);
+            this.ClientSize = new System.Drawing.Size(1012, 449);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
@@ -178,6 +186,7 @@ namespace ITP_Project
             this.Controls.Add(this.btn_manage_lectures);
             this.Controls.Add(this.btn_manage_locations);
             this.Controls.Add(this.btn_working_schedule);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Timetable Management System";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
