@@ -72,6 +72,7 @@ namespace ITP_Project
             this.btn_manage_locations.TabIndex = 1;
             this.btn_manage_locations.Text = "Manage Locations";
             this.btn_manage_locations.UseVisualStyleBackColor = false;
+            this.btn_manage_locations.Click += new System.EventHandler(this.btn_manage_locations_Click);
             // 
             // btn_manage_students
             // 
@@ -87,6 +88,7 @@ namespace ITP_Project
             this.btn_manage_students.TabIndex = 3;
             this.btn_manage_students.Text = "Manage Students";
             this.btn_manage_students.UseVisualStyleBackColor = false;
+            this.btn_manage_students.Click += new System.EventHandler(this.btn_manage_students_Click);
             // 
             // btn_manage_lectures
             // 
@@ -102,6 +104,7 @@ namespace ITP_Project
             this.btn_manage_lectures.TabIndex = 2;
             this.btn_manage_lectures.Text = "Manage Lecturers";
             this.btn_manage_lectures.UseVisualStyleBackColor = false;
+            this.btn_manage_lectures.Click += new System.EventHandler(this.btn_manage_lectures_Click);
             // 
             // btn_manage_subjects
             // 
@@ -117,6 +120,7 @@ namespace ITP_Project
             this.btn_manage_subjects.TabIndex = 5;
             this.btn_manage_subjects.Text = "Manage Subjects";
             this.btn_manage_subjects.UseVisualStyleBackColor = false;
+            this.btn_manage_subjects.Click += new System.EventHandler(this.btn_manage_subjects_Click);
             // 
             // btn_manage_taglist
             // 

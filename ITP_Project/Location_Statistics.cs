@@ -34,5 +34,10 @@ namespace ITP_Project
         {
 
         }
+
+        private void progressBar3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

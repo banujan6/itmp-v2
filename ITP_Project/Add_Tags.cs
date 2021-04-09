@@ -86,8 +86,6 @@ namespace ITP_Project
             MySqlCommand cmd = new MySqlCommand("INSERT INTO tags (id, tag, code, related_tag) VALUES ('','"+tag+"','"+code+"','"+related_tag+"')");
             cmd.Connection = connect;
             connect.Open();
-
-            MySqlDataReader dr;
             cmd.ExecuteReader().Close();
             connect.Close();
 
@@ -127,8 +125,6 @@ namespace ITP_Project
                 MySqlCommand cmd = new MySqlCommand("UPDATE tags SET tag = '" + tag + "', code = '" + code + "', related_tag = '" + related_tag + "' WHERE id = "+this.selectedRecord);
                 cmd.Connection = connect;
                 connect.Open();
-
-                MySqlDataReader dr;
                 cmd.ExecuteReader().Close();
                 connect.Close();
 
@@ -187,8 +183,6 @@ namespace ITP_Project
                     MySqlCommand cmd = new MySqlCommand("DELETE FROM tags WHERE id = " + this.selectedRecord);
                     cmd.Connection = connect;
                     connect.Open();
-
-                    MySqlDataReader dr;
                     cmd.ExecuteReader().Close();
                     connect.Close();
                     this.dataGridView1.Rows.Clear();

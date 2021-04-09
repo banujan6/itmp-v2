@@ -28,5 +28,29 @@ namespace ITP_Project
             Add_Tags tagWindow = new Add_Tags();
             tagWindow.ShowDialog();
         }
+
+        private void btn_manage_students_Click(object sender, EventArgs e)
+        {
+            add_student_group addStrudentGroup = new add_student_group();
+            addStrudentGroup.ShowDialog();
+        }
+
+        private void btn_manage_subjects_Click(object sender, EventArgs e)
+        {
+            SubjectAdding subjectWindow = new SubjectAdding();
+            subjectWindow.ShowDialog();
+        }
+
+        private void btn_manage_locations_Click(object sender, EventArgs e)
+        {
+            Add_Locations locationWindow = new Add_Locations();
+            locationWindow.ShowDialog();
+        }
+
+        private void btn_manage_lectures_Click(object sender, EventArgs e)
+        {
+            LectureAdding lectureScreen = new LectureAdding();
+            lectureScreen.ShowDialog();
+        }
     }
 }
