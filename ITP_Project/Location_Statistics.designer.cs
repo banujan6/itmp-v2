@@ -30,14 +30,16 @@
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.label1 = new System.Windows.Forms.Label();
             this.Reg_LecturerPan = new System.Windows.Forms.Panel();
+            this.lecturers_count = new System.Windows.Forms.Label();
             this.Reg_stdPan = new System.Windows.Forms.Panel();
+            this.students_count = new System.Windows.Forms.Label();
             this.Reg_SubPan = new System.Windows.Forms.Panel();
+            this.subjects_count = new System.Windows.Forms.Label();
             this.Reg_RoomPan = new System.Windows.Forms.Panel();
+            this.locations_count = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Label4 = new System.Windows.Forms.Label();
@@ -49,10 +51,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.Reg_LecturerPan.SuspendLayout();
             this.Reg_stdPan.SuspendLayout();
             this.Reg_SubPan.SuspendLayout();
@@ -73,42 +71,86 @@
             // Reg_LecturerPan
             // 
             this.Reg_LecturerPan.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.Reg_LecturerPan.Controls.Add(this.label9);
+            this.Reg_LecturerPan.Controls.Add(this.lecturers_count);
             this.Reg_LecturerPan.Location = new System.Drawing.Point(72, 23);
             this.Reg_LecturerPan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Reg_LecturerPan.Name = "Reg_LecturerPan";
             this.Reg_LecturerPan.Size = new System.Drawing.Size(109, 74);
             this.Reg_LecturerPan.TabIndex = 3;
             // 
+            // lecturers_count
+            // 
+            this.lecturers_count.AutoSize = true;
+            this.lecturers_count.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lecturers_count.ForeColor = System.Drawing.Color.White;
+            this.lecturers_count.Location = new System.Drawing.Point(40, 19);
+            this.lecturers_count.Name = "lecturers_count";
+            this.lecturers_count.Size = new System.Drawing.Size(26, 29);
+            this.lecturers_count.TabIndex = 0;
+            this.lecturers_count.Text = "3";
+            // 
             // Reg_stdPan
             // 
             this.Reg_stdPan.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.Reg_stdPan.Controls.Add(this.label10);
+            this.Reg_stdPan.Controls.Add(this.students_count);
             this.Reg_stdPan.Location = new System.Drawing.Point(367, 23);
             this.Reg_stdPan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Reg_stdPan.Name = "Reg_stdPan";
             this.Reg_stdPan.Size = new System.Drawing.Size(109, 74);
             this.Reg_stdPan.TabIndex = 3;
             // 
+            // students_count
+            // 
+            this.students_count.AutoSize = true;
+            this.students_count.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.students_count.ForeColor = System.Drawing.Color.White;
+            this.students_count.Location = new System.Drawing.Point(42, 19);
+            this.students_count.Name = "students_count";
+            this.students_count.Size = new System.Drawing.Size(26, 29);
+            this.students_count.TabIndex = 1;
+            this.students_count.Text = "5";
+            // 
             // Reg_SubPan
             // 
             this.Reg_SubPan.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.Reg_SubPan.Controls.Add(this.label11);
+            this.Reg_SubPan.Controls.Add(this.subjects_count);
             this.Reg_SubPan.Location = new System.Drawing.Point(652, 23);
             this.Reg_SubPan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Reg_SubPan.Name = "Reg_SubPan";
             this.Reg_SubPan.Size = new System.Drawing.Size(109, 74);
             this.Reg_SubPan.TabIndex = 3;
             // 
+            // subjects_count
+            // 
+            this.subjects_count.AutoSize = true;
+            this.subjects_count.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subjects_count.ForeColor = System.Drawing.Color.White;
+            this.subjects_count.Location = new System.Drawing.Point(43, 19);
+            this.subjects_count.Name = "subjects_count";
+            this.subjects_count.Size = new System.Drawing.Size(26, 29);
+            this.subjects_count.TabIndex = 7;
+            this.subjects_count.Text = "2";
+            // 
             // Reg_RoomPan
             // 
             this.Reg_RoomPan.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.Reg_RoomPan.Controls.Add(this.label12);
+            this.Reg_RoomPan.Controls.Add(this.locations_count);
             this.Reg_RoomPan.Location = new System.Drawing.Point(909, 23);
             this.Reg_RoomPan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Reg_RoomPan.Name = "Reg_RoomPan";
             this.Reg_RoomPan.Size = new System.Drawing.Size(109, 74);
             this.Reg_RoomPan.TabIndex = 3;
+            // 
+            // locations_count
+            // 
+            this.locations_count.AutoSize = true;
+            this.locations_count.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.locations_count.ForeColor = System.Drawing.Color.White;
+            this.locations_count.Location = new System.Drawing.Point(42, 19);
+            this.locations_count.Name = "locations_count";
+            this.locations_count.Size = new System.Drawing.Size(26, 29);
+            this.locations_count.TabIndex = 7;
+            this.locations_count.Text = "5";
             // 
             // label2
             // 
@@ -149,6 +191,7 @@
             this.Crt_Lectxt.Name = "Crt_Lectxt";
             this.Crt_Lectxt.Size = new System.Drawing.Size(249, 22);
             this.Crt_Lectxt.TabIndex = 5;
+            this.Crt_Lectxt.Text = "Mr. Abeykoon";
             // 
             // Cur_Grptxt
             // 
@@ -157,6 +200,7 @@
             this.Cur_Grptxt.Name = "Cur_Grptxt";
             this.Cur_Grptxt.Size = new System.Drawing.Size(249, 22);
             this.Cur_Grptxt.TabIndex = 5;
+            this.Cur_Grptxt.Text = "IT.Y1.S2.1.2";
             // 
             // Cur_Modtxt
             // 
@@ -165,6 +209,7 @@
             this.Cur_Modtxt.Name = "Cur_Modtxt";
             this.Cur_Modtxt.Size = new System.Drawing.Size(249, 22);
             this.Cur_Modtxt.TabIndex = 5;
+            this.Cur_Modtxt.Text = "SPM";
             // 
             // label6
             // 
@@ -218,63 +263,11 @@
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(72, 188);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Lecture Rooms";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Labs";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(283, 227);
             this.chart1.TabIndex = 6;
             this.chart1.Text = "chart1";
             title1.Name = "Lecture Rooms";
             this.chart1.Titles.Add(title1);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(34, 19);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(26, 29);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "0";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(32, 19);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(26, 29);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "0";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(27, 19);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(26, 29);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "0";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(26, 19);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(26, 29);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "0";
             // 
             // Location_Statistics
             // 
@@ -332,9 +325,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lecturers_count;
+        private System.Windows.Forms.Label students_count;
+        private System.Windows.Forms.Label subjects_count;
+        private System.Windows.Forms.Label locations_count;
     }
 }

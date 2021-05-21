@@ -105,7 +105,7 @@ namespace ITP_Project
             }
 
             MySqlConnection connect = new MySqlConnection(this.connectionString);
-            MySqlCommand cmd = new MySqlCommand("INSERT INTO student_groups VALUES ('','"+year_sem+"','"+program+"',"+group_no+","+sub_group_no+",'"+group_id+"','"+sub_group_id+"')");
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO student_groups VALUES (NULL,'"+year_sem+"','"+program+"',"+group_no+","+sub_group_no+",'"+group_id+"','"+sub_group_id+"')");
             cmd.Connection = connect;
             connect.Open();
             cmd.ExecuteReader().Close();

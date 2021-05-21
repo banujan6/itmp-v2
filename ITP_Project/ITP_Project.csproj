@@ -12,7 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\banujan\Desktop\Timetable Management System\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -22,10 +23,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -46,6 +47,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>63FF4BB7634727BE8EA44D21C64B6194327DBD84</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ITP_Project_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
@@ -90,6 +103,7 @@
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -113,11 +127,23 @@
     <Compile Include="add-working-hours-days-window.designer.cs">
       <DependentUpon>add-working-hours-days-window.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddUpdateSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUpdateSession.Designer.cs">
+      <DependentUpon>AddUpdateSession.cs</DependentUpon>
+    </Compile>
     <Compile Include="Add_Locations.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Add_Locations.designer.cs">
       <DependentUpon>Add_Locations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Session_Non_Available_Times.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Session_Non_Available_Times.Designer.cs">
+      <DependentUpon>Add_Session_Non_Available_Times.cs</DependentUpon>
     </Compile>
     <Compile Include="add_student_group.cs">
       <SubType>Form</SubType>
@@ -131,11 +157,18 @@
     <Compile Include="Add_Tags.designer.cs">
       <DependentUpon>Add_Tags.cs</DependentUpon>
     </Compile>
+    <Compile Include="Config.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generate Time Table.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generate Time Table.Designer.cs">
+      <DependentUpon>Generate Time Table.cs</DependentUpon>
     </Compile>
     <Compile Include="LectureAdding.cs">
       <SubType>Form</SubType>
@@ -149,8 +182,20 @@
     <Compile Include="Location_Statistics.designer.cs">
       <DependentUpon>Location_Statistics.cs</DependentUpon>
     </Compile>
+    <Compile Include="manage_sessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage_sessions.Designer.cs">
+      <DependentUpon>manage_sessions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Session_Select_Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session_Select_Window.Designer.cs">
+      <DependentUpon>Session_Select_Window.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubjectAdding.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,8 +205,14 @@
     <EmbeddedResource Include="add-working-hours-days-window.resx">
       <DependentUpon>add-working-hours-days-window.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddUpdateSession.resx">
+      <DependentUpon>AddUpdateSession.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Add_Locations.resx">
       <DependentUpon>Add_Locations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_Session_Non_Available_Times.resx">
+      <DependentUpon>Add_Session_Non_Available_Times.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="add_student_group.resx">
       <DependentUpon>add_student_group.cs</DependentUpon>
@@ -172,11 +223,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Generate Time Table.resx">
+      <DependentUpon>Generate Time Table.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LectureAdding.resx">
       <DependentUpon>LectureAdding.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Location_Statistics.resx">
       <DependentUpon>Location_Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage_sessions.resx">
+      <DependentUpon>manage_sessions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -187,9 +244,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Session_Select_Window.resx">
+      <DependentUpon>Session_Select_Window.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubjectAdding.resx">
       <DependentUpon>SubjectAdding.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ITP_Project_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

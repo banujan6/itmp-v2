@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace ITP_Project
 {
@@ -51,6 +52,45 @@ namespace ITP_Project
         {
             LectureAdding lectureScreen = new LectureAdding();
             lectureScreen.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Location_Statistics lc = new Location_Statistics();
+            lc.ShowDialog();
+        }
+
+        private void btn_manage_sessions_Click(object sender, EventArgs e)
+        {
+            manage_sessions ms = new manage_sessions();
+            ms.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Generate_Time_Table gtt = new Generate_Time_Table();
+            gtt.ShowDialog();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                Config config = new Config();
+                MySqlConnection connect = new MySqlConnection(config.connectionString);
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM lectures LIMIT 0,1");
+                cmd.Connection = connect;
+                connect.Open();
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                reader.Close();
+                connect.Close();
+            } catch
+            {
+                MessageBox.Show("Unable to connect the database server. Please check your internet connectivity.", "Connection Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+            }
         }
     }
 }

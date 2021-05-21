@@ -410,7 +410,7 @@ namespace ITP_Project
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Button clearBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private string connectionString = "server=localhost;user=root;password=;database=itpm";
+        private string connectionString = "server=database-itpm.cmahd6rnztyt.ap-south-1.rds.amazonaws.com;user=root;password=root_toor;database=itpm";
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn year_semester;
         private System.Windows.Forms.DataGridViewTextBoxColumn program;

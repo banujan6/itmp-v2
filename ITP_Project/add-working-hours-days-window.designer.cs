@@ -115,6 +115,7 @@ namespace ITP_Project
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(710, 174);
             this.checkedListBox1.TabIndex = 21;
+            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // btn_save
             // 
@@ -173,6 +174,7 @@ namespace ITP_Project
             // 
             // number_of_working_days
             // 
+            this.number_of_working_days.Enabled = false;
             this.number_of_working_days.Location = new System.Drawing.Point(84, 56);
             this.number_of_working_days.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.number_of_working_days.Name = "number_of_working_days";
@@ -413,7 +415,7 @@ namespace ITP_Project
         }
 
         #endregion
-        private string connectionString = "server=localhost;user=root;password=;database=itpm";
+        private string connectionString = "server=database-itpm.cmahd6rnztyt.ap-south-1.rds.amazonaws.com;user=root;password=root_toor;database=itpm";
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.CheckedListBox checkedListBox1;

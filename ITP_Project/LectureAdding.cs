@@ -96,7 +96,7 @@ namespace ITP_Project
             string department = this.department.Text;
 
             MySqlConnection connect = new MySqlConnection(this.connectionString);
-            MySqlCommand cmd = new MySqlCommand("INSERT INTO lectures VALUES ('','"+lecture+"','"+center+"','"+building+"','"+faculty+"','"+level+"','"+department+"', '')");
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO lectures VALUES (NULL,'"+lecture+"','"+center+"','"+building+"','"+faculty+"','"+level+"','"+department+"', '')");
             cmd.Connection = connect;
             connect.Open();
             cmd.ExecuteReader().Close();

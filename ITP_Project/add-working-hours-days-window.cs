@@ -121,7 +121,7 @@ namespace ITP_Project
             }
 
             MySqlConnection connect = new MySqlConnection(this.connectionString);
-            MySqlCommand cmd = new MySqlCommand("INSERT INTO timeslots VALUES ('', '"+timeSlot+"','"+timeFrom+"','"+timeTo+"')");
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO timeslots VALUES (NULL, '"+timeSlot+"','"+timeFrom+"','"+timeTo+"')");
             cmd.Connection = connect;
             connect.Open();
             cmd.ExecuteReader().Close();
@@ -130,6 +130,7 @@ namespace ITP_Project
             MessageBox.Show("Time slot has been added successfully!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             this.loadTimeSlots();
+            this.btnClear_Click(null, EventArgs.Empty);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -163,6 +164,7 @@ namespace ITP_Project
                 MessageBox.Show("Time slot has been updated successfully!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.loadTimeSlots();
+                this.btnClear_Click(null, EventArgs.Empty);
 
                 this.btnCreate.Enabled = true;
                 this.btnDelete.Enabled = true;
@@ -207,5 +209,9 @@ namespace ITP_Project
         private Boolean updateMode = false;
         private string selectedRecord = null;
 
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.number_of_working_days.Value = this.checkedListBox1.CheckedItems.Count;
+        }
     }
 }

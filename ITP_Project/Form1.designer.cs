@@ -39,6 +39,9 @@ namespace ITP_Project
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_manage_sessions = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +51,7 @@ namespace ITP_Project
             this.btn_working_schedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_working_schedule.Image = ((System.Drawing.Image)(resources.GetObject("btn_working_schedule.Image")));
             this.btn_working_schedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_working_schedule.Location = new System.Drawing.Point(492, 161);
+            this.btn_working_schedule.Location = new System.Drawing.Point(492, 140);
             this.btn_working_schedule.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_working_schedule.Name = "btn_working_schedule";
             this.btn_working_schedule.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
@@ -64,7 +67,7 @@ namespace ITP_Project
             this.btn_manage_locations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_manage_locations.Image = ((System.Drawing.Image)(resources.GetObject("btn_manage_locations.Image")));
             this.btn_manage_locations.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_manage_locations.Location = new System.Drawing.Point(745, 161);
+            this.btn_manage_locations.Location = new System.Drawing.Point(745, 140);
             this.btn_manage_locations.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_manage_locations.Name = "btn_manage_locations";
             this.btn_manage_locations.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
@@ -80,7 +83,7 @@ namespace ITP_Project
             this.btn_manage_students.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_manage_students.Image = ((System.Drawing.Image)(resources.GetObject("btn_manage_students.Image")));
             this.btn_manage_students.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_manage_students.Location = new System.Drawing.Point(745, 234);
+            this.btn_manage_students.Location = new System.Drawing.Point(745, 193);
             this.btn_manage_students.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_manage_students.Name = "btn_manage_students";
             this.btn_manage_students.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
@@ -96,7 +99,7 @@ namespace ITP_Project
             this.btn_manage_lectures.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_manage_lectures.Image = ((System.Drawing.Image)(resources.GetObject("btn_manage_lectures.Image")));
             this.btn_manage_lectures.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_manage_lectures.Location = new System.Drawing.Point(492, 234);
+            this.btn_manage_lectures.Location = new System.Drawing.Point(492, 193);
             this.btn_manage_lectures.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_manage_lectures.Name = "btn_manage_lectures";
             this.btn_manage_lectures.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
@@ -112,7 +115,7 @@ namespace ITP_Project
             this.btn_manage_subjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_manage_subjects.Image = ((System.Drawing.Image)(resources.GetObject("btn_manage_subjects.Image")));
             this.btn_manage_subjects.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_manage_subjects.Location = new System.Drawing.Point(745, 308);
+            this.btn_manage_subjects.Location = new System.Drawing.Point(745, 247);
             this.btn_manage_subjects.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_manage_subjects.Name = "btn_manage_subjects";
             this.btn_manage_subjects.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
@@ -128,7 +131,7 @@ namespace ITP_Project
             this.btn_manage_taglist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_manage_taglist.Image = ((System.Drawing.Image)(resources.GetObject("btn_manage_taglist.Image")));
             this.btn_manage_taglist.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_manage_taglist.Location = new System.Drawing.Point(492, 308);
+            this.btn_manage_taglist.Location = new System.Drawing.Point(492, 247);
             this.btn_manage_taglist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_manage_taglist.Name = "btn_manage_taglist";
             this.btn_manage_taglist.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
@@ -174,6 +177,54 @@ namespace ITP_Project
             this.label1.TabIndex = 9;
             this.label1.Text = "Version 1.0.0";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(492, 301);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(218, 46);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Static Analysis";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_manage_sessions
+            // 
+            this.btn_manage_sessions.BackColor = System.Drawing.Color.White;
+            this.btn_manage_sessions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_manage_sessions.Image = ((System.Drawing.Image)(resources.GetObject("btn_manage_sessions.Image")));
+            this.btn_manage_sessions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_manage_sessions.Location = new System.Drawing.Point(745, 301);
+            this.btn_manage_sessions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_manage_sessions.Name = "btn_manage_sessions";
+            this.btn_manage_sessions.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn_manage_sessions.Size = new System.Drawing.Size(218, 46);
+            this.btn_manage_sessions.TabIndex = 11;
+            this.btn_manage_sessions.Text = "Manage Sessions";
+            this.btn_manage_sessions.UseVisualStyleBackColor = false;
+            this.btn_manage_sessions.Click += new System.EventHandler(this.btn_manage_sessions_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(492, 355);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(471, 46);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Generate Time Tables";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -181,6 +232,9 @@ namespace ITP_Project
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1012, 449);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_manage_sessions);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
@@ -193,6 +247,7 @@ namespace ITP_Project
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Timetable Management System";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -210,6 +265,9 @@ namespace ITP_Project
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_manage_sessions;
+        private System.Windows.Forms.Button button2;
     }
 }
 

@@ -81,7 +81,7 @@ namespace ITP_Project
             }
 
             MySqlConnection connect = new MySqlConnection(this.connectionString);
-            MySqlCommand cmd = new MySqlCommand("INSERT INTO subject VALUES ('','"+year+"','"+sem+"','"+sub+"','"+code+"',"+lec+","+tut+","+lab+","+tut+")");
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO subject VALUES (NULL,'"+year+"','"+sem+"','"+sub+"','"+code+"',"+lec+","+tut+","+lab+","+tut+")");
             cmd.Connection = connect;
             connect.Open();
             cmd.ExecuteReader().Close();
@@ -135,7 +135,7 @@ namespace ITP_Project
 
         private Boolean updateMode = false;
         private string selectedRecord = null;
-        private string connectionString = "server=localhost;user=root;password=;database=itpm";
+        private string connectionString = "server=database-itpm.cmahd6rnztyt.ap-south-1.rds.amazonaws.com;user=root;password=root_toor;database=itpm";
 
         private void btnCancel_Click(object sender, EventArgs e)
         {

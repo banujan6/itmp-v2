@@ -83,7 +83,7 @@ namespace ITP_Project
             }
 
             MySqlConnection connect = new MySqlConnection(this.connectionString);
-            MySqlCommand cmd = new MySqlCommand("INSERT INTO tags (id, tag, code, related_tag) VALUES ('','"+tag+"','"+code+"','"+related_tag+"')");
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO tags (id, tag, code, related_tag) VALUES (NULL,'"+tag+"','"+code+"','"+related_tag+"')");
             cmd.Connection = connect;
             connect.Open();
             cmd.ExecuteReader().Close();
