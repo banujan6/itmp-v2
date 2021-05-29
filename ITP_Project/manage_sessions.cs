@@ -32,28 +32,29 @@ namespace ITP_Project
             this.load_sessions();
         }
 
-        private void manage_sessions_Load(object sender, EventArgs e)
+        private void manage_sessions_Load(object sender, EventArgs e) //manage load session
         {
-            this.load_sessions();
+            this.load_sessions(); //mgk part(load all the session function)
             this.loadNonAvailableTime();
         }
 
         private void load_sessions()
         {
             Config config = new Config();
-            MySqlConnection connect = new MySqlConnection(config.connectionString);
+            MySqlConnection connect = new MySqlConnection(config.connectionString); //connect to the database
             MySqlCommand cmd = new MySqlCommand("SELECT * FROM sessions");
             cmd.Connection = connect;
-            connect.Open();
+            connect.Open(); //open connection
 
-            MySqlDataReader reader = cmd.ExecuteReader();
+            MySqlDataReader reader = cmd.ExecuteReader(); //command execution
 
+            //clear all tables before adding values
             this.SessionTable.Rows.Clear();
             this.ConsicutiveSessions.Rows.Clear();
             this.Non_Overlapping_Sessions.Rows.Clear();
             this.Parallel_Sessions.Rows.Clear();
 
-            while (reader.Read())
+            while (reader.Read()) //looping sessions
             {
                 DataGridViewRow row = new DataGridViewRow();
                 row.CreateCells(this.SessionTable);
@@ -69,7 +70,7 @@ namespace ITP_Project
 
                 this.SessionTable.Rows.Add(row);
 
-                if (reader.GetInt32("is_consecutive") == 1)
+                if (reader.GetInt32("is_consecutive") == 1)//mgk :- consecutive session adding
                 {
 
                     row = new DataGridViewRow();
@@ -81,10 +82,10 @@ namespace ITP_Project
                     row.Cells[4].Value = reader.GetString("group");
                     row.Cells[5].Value = reader.GetString("tag");
 
-                    this.ConsicutiveSessions.Rows.Add(row);
+                    this.ConsicutiveSessions.Rows.Add(row); //adding the raw from the table
                 }
 
-                if (reader.GetInt32("is_parallel") == 1)
+                if (reader.GetInt32("is_parallel") == 1)//mgk:- parallel session add
                 {
 
                     row = new DataGridViewRow();
@@ -96,10 +97,10 @@ namespace ITP_Project
                     row.Cells[4].Value = reader.GetString("group");
                     row.Cells[5].Value = reader.GetString("tag");
 
-                    this.Parallel_Sessions.Rows.Add(row);
+                    this.Parallel_Sessions.Rows.Add(row); //adding the raw from the table
                 }
 
-                if (reader.GetInt32("is_overlapping") == 0)
+                if (reader.GetInt32("is_overlapping") == 0)//mgk:- non overlapping add (logic is= if overlapping false)
                 {
 
                     row = new DataGridViewRow();
@@ -111,11 +112,11 @@ namespace ITP_Project
                     row.Cells[4].Value = reader.GetString("group");
                     row.Cells[5].Value = reader.GetString("tag");
 
-                    this.Non_Overlapping_Sessions.Rows.Add(row);
+                    this.Non_Overlapping_Sessions.Rows.Add(row); //adding the raw from the table
                 }
             }
 
-
+            //close connections
             reader.Close();
             connect.Close();
         }
@@ -173,7 +174,7 @@ namespace ITP_Project
             {
                 return;
             }
-
+            //database
             Config config = new Config();
             MySqlConnection connect = new MySqlConnection(config.connectionString);
             MySqlCommand cmd = new MySqlCommand("SELECT * FROM sessions WHERE "+condition);
@@ -234,6 +235,7 @@ namespace ITP_Project
             this.load_sessions();
         }
 
+        //mgk part
         private void add_consecutive_session_Click(object sender, EventArgs e)
         {
             Session_Select_Window ssw = new Session_Select_Window("consecutive_sessons");
