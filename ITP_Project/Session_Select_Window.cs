@@ -26,17 +26,18 @@ namespace ITP_Project
             this.load_sessions();
         }
 
+        //mgk part
         private void load_sessions()
         {
             Config config = new Config();
-            MySqlConnection connect = new MySqlConnection(config.connectionString);
+            MySqlConnection connect = new MySqlConnection(config.connectionString); //database connection
             MySqlCommand cmd = new MySqlCommand("SELECT * FROM sessions");
             cmd.Connection = connect;
             connect.Open();
 
-            MySqlDataReader reader = cmd.ExecuteReader();
+            MySqlDataReader reader = cmd.ExecuteReader(); //command execution
 
-            this.SessionTable.Rows.Clear();
+            this.SessionTable.Rows.Clear();//table clear
 
             while (reader.Read())
             {
@@ -71,28 +72,31 @@ namespace ITP_Project
             }
 
 
+            //close connections
             reader.Close();
             connect.Close();
         }
 
-        private void SessionTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        //if checkbox is not click return zero
+        private void SessionTable_CellContentClick(object sender, DataGridViewCellEventArgs e) 
         {
             if (e.ColumnIndex != 0)
             {
                 return;
             }
 
-            String status = this.SessionTable.Rows[e.RowIndex].Cells[0].Value.ToString();
+            //keep status if the checkbox is available or not
+            String status = this.SessionTable.Rows[e.RowIndex].Cells[0].Value.ToString(); 
             int currentStatus = 0;
 
-            if (status == "True")
+            if (status == "True") //if the checkbox is checked
             {
-                this.SessionTable.Rows[e.RowIndex].Cells[0].Value = false;
+                this.SessionTable.Rows[e.RowIndex].Cells[0].Value = false; //return false
                 currentStatus = 0;
             }
             else
             {
-                this.SessionTable.Rows[e.RowIndex].Cells[0].Value = true;
+                this.SessionTable.Rows[e.RowIndex].Cells[0].Value = true;//else true
                 currentStatus = 1;
             }
 
@@ -103,6 +107,7 @@ namespace ITP_Project
 
             String sql = null;
 
+            //update tables from dtabases
             if (this.produces == "consecutive_sessons")
             {
                 sql = "UPDATE sessions SET is_consecutive = " + currentStatus + " WHERE id = " + id;
@@ -119,6 +124,7 @@ namespace ITP_Project
 
             MySqlCommand cmd = new MySqlCommand(sql);
 
+            //open connections and close
             cmd.Connection = connect;
             connect.Open();
             cmd.ExecuteReader().Close();
