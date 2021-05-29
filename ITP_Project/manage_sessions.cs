@@ -173,7 +173,7 @@ namespace ITP_Project
             {
                 return;
             }
-
+            //database
             Config config = new Config();
             MySqlConnection connect = new MySqlConnection(config.connectionString);
             MySqlCommand cmd = new MySqlCommand("SELECT * FROM sessions WHERE "+condition);

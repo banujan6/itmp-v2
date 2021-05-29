@@ -283,12 +283,13 @@ namespace ITP_Project
             // 
             // btnSearch
             // 
+            this.btnSearch.BackColor = System.Drawing.Color.DarkGray;
             this.btnSearch.Location = new System.Drawing.Point(811, 43);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(161, 47);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // comboSearchOption
