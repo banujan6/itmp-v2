@@ -51,9 +51,31 @@ namespace ITP_Project
             connect.Close();
         }
 
+        private void loadBuildings()
+        {
+            MySqlConnection connect = new MySqlConnection(this.connectionString);
+            MySqlCommand cmd = new MySqlCommand("SELECT DISTINCT(building) as building FROM locations ORDER BY building");
+            cmd.Connection = connect;
+            connect.Open();
+
+            MySqlDataReader dr;
+            dr = cmd.ExecuteReader();
+
+            this.dataGridView1.Rows.Clear();
+
+            while (dr.Read())
+            {
+                this.building.Items.Add(dr.GetString("building"));
+            }
+
+            dr.Close();
+            connect.Close();
+        }
+
         private void LectureAdding_Load(object sender, EventArgs e)
         {
             this.loadData();
+            this.loadBuildings();
         }
 
         private void label8_Click(object sender, EventArgs e)

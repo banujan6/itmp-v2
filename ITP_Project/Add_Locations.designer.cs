@@ -201,6 +201,7 @@
             this.Updatebtn.TabIndex = 14;
             this.Updatebtn.Text = "Update";
             this.Updatebtn.UseVisualStyleBackColor = true;
+            this.Updatebtn.Click += new System.EventHandler(this.button4_Click);
             // 
             // inserBtn
             // 
@@ -222,6 +223,7 @@
             this.deleteBtn.TabIndex = 16;
             this.deleteBtn.Text = "Delete";
             this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // Clearbtn
             // 
@@ -232,6 +234,7 @@
             this.Clearbtn.TabIndex = 17;
             this.Clearbtn.Text = "Clear";
             this.Clearbtn.UseVisualStyleBackColor = true;
+            this.Clearbtn.Click += new System.EventHandler(this.Clearbtn_Click);
             // 
             // txtCapacity
             // 

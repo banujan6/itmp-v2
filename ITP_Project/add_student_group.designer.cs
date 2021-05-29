@@ -136,9 +136,11 @@ namespace ITP_Project
             this.programme.Items.AddRange(new object[] {
             "IT",
             "CS",
-            "DS",
-            "SE",
-            "IM"});
+            "IM",
+            "ISE",
+            "CSNE",
+            "DM",
+            "SE"});
             this.programme.Location = new System.Drawing.Point(244, 133);
             this.programme.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.programme.Name = "programme";
