@@ -362,7 +362,7 @@ namespace ITP_Project
         private void studentGenerate_Click(object sender, EventArgs e)
         {
             this.Load_Time_Slots();
-            this.Generate_Rooms_TimeTable();
+            this.Generate_Group_TimeTable();
         }
 
         private void locationGenerate_Click(object sender, EventArgs e)
