@@ -44,7 +44,7 @@ namespace ITP_Project
         {
             Config config = new Config();
             MySqlConnection connect = new MySqlConnection(config.connectionString);
-            MySqlCommand cmd = new MySqlCommand("SELECT count(*) as count, lecture FROM lectures");
+            MySqlCommand cmd = new MySqlCommand("SELECT count(*) as count, lecture FROM lectures ORDER BY id");
             cmd.Connection = connect;
             connect.Open();
 
@@ -53,8 +53,19 @@ namespace ITP_Project
             while(reader.Read())
             {
                 this.lecturers_count.Text = reader.GetInt32("count").ToString();
+            }
+
+            cmd = new MySqlCommand("SELECT lecture FROM lectures ORDER BY id");
+            cmd.Connection = connect;
+
+            reader.Close();
+            reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
                 this.Crt_Lectxt.Text = reader.GetString("lecture");
             }
+
 
             reader.Close();
             connect.Close();

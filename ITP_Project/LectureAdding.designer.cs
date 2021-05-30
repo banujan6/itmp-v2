@@ -192,10 +192,13 @@ namespace ITP_Project
             // 
             this.department.FormattingEnabled = true;
             this.department.Items.AddRange(new object[] {
-            "Cyber Security",
-            "Software Engineering",
-            "Civil Engineering",
-            "Inerective Media"});
+            "IT",
+            "CS",
+            "IM",
+            "ISE",
+            "CSNE",
+            "DM",
+            "SE"});
             this.department.Location = new System.Drawing.Point(177, 189);
             this.department.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.department.Name = "department";

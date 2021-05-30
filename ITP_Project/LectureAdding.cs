@@ -61,7 +61,6 @@ namespace ITP_Project
             MySqlDataReader dr;
             dr = cmd.ExecuteReader();
 
-            this.dataGridView1.Rows.Clear();
 
             while (dr.Read())
             {
