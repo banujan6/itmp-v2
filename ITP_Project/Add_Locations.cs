@@ -29,7 +29,7 @@ namespace ITP_Project
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -48,7 +48,8 @@ namespace ITP_Project
                 this.Clearbtn.Text = "Cancel";
                 this.updateMode = true;
             }
-            else {
+            else
+            {
 
                 string building = this.txtBuilding.Text;
                 string room = this.txtRoom.Text;
@@ -56,7 +57,7 @@ namespace ITP_Project
                 string capacity = this.txtCapacity.Text;
 
                 MySqlConnection connect = new MySqlConnection(this.connectionString);
-                MySqlCommand cmd = new MySqlCommand("UPDATE locations SET building = '"+ building + "', room = '"+room+"', type = '"+type+"', capacity = '"+capacity+"' WHERE id = "+this.selectedRecord);
+                MySqlCommand cmd = new MySqlCommand("UPDATE locations SET building = '" + building + "', room = '" + room + "', type = '" + type + "', capacity = '" + capacity + "' WHERE id = " + this.selectedRecord);
                 cmd.Connection = connect;
                 connect.Open();
                 cmd.ExecuteReader().Close();
@@ -70,7 +71,7 @@ namespace ITP_Project
                 this.deleteBtn.Enabled = true;
                 this.Updatebtn.Text = "Update";
                 this.Clearbtn.Text = "Clear";
-                this.updateMode = true;
+                this.updateMode = false;
                 this.selectedRecord = null;
 
                 this.Clearbtn_Click(null, EventArgs.Empty);
@@ -81,24 +82,24 @@ namespace ITP_Project
         {
             MySqlConnection connect = new MySqlConnection(this.connectionString);
             MySqlCommand cmd = new MySqlCommand("SELECT * FROM locations ORDER BY id");
-            cmd.Connection = connect;
-            connect.Open();
+            cmd.Connection = connect;//assigning coonection to the command//
+            connect.Open();//opens coonection//
 
             MySqlDataReader dr;
-            dr = cmd.ExecuteReader();
+            dr = cmd.ExecuteReader();//fecthing results//
 
-            this.dataGridView1.Rows.Clear();
+            this.dataGridView1.Rows.Clear();//refresh entries//
 
             while (dr.Read())
             {
-                DataGridViewRow row = new DataGridViewRow();
-                row.CreateCells(this.dataGridView1);
+                DataGridViewRow row = new DataGridViewRow();//creates rows//
+                row.CreateCells(this.dataGridView1);//creates cells to the table//
                 row.Cells[0].Value = dr.GetInt64("id").ToString();
                 row.Cells[1].Value = dr.GetString("building");
                 row.Cells[2].Value = dr.GetString("room");
                 row.Cells[3].Value = dr.GetString("type");
                 row.Cells[4].Value = dr.GetString("capacity");
-                this.dataGridView1.Rows.Add(row);
+                this.dataGridView1.Rows.Add(row);//add row to table//
 
                 this.comboRooms.Items.Add(dr.GetString("room"));
                 this.selectRooms.Items.Add(dr.GetString("room"));
@@ -129,7 +130,7 @@ namespace ITP_Project
 
         private void Add_Locations_Load(object sender, EventArgs e)
         {
-            this.loadData();
+            this.loadData();//Loading all location data//
             this.Load_Sessions();
             this.Load_Session_Allocations();
             this.loadDays();
@@ -169,6 +170,9 @@ namespace ITP_Project
             this.roomType.Text = "";
             this.txtCapacity.Text = "";
             this.selectedRecord = null;
+            this.Updatebtn.Text = "Update";
+            this.inserBtn.Enabled = true;
+            this.deleteBtn.Enabled = true;
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)
@@ -177,9 +181,10 @@ namespace ITP_Project
             string name = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
             DialogResult dialogResult = MessageBox.Show("Do you want to delete location '" + name + "'", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            if (dialogResult == DialogResult.Yes) {
+            if (dialogResult == DialogResult.Yes)
+            {
                 MySqlConnection connect = new MySqlConnection(this.connectionString);
-                MySqlCommand cmd = new MySqlCommand("DELETE FROM locations WHERE id = "+id);
+                MySqlCommand cmd = new MySqlCommand("DELETE FROM locations WHERE id = " + id);
                 cmd.Connection = connect;
                 connect.Open();
                 cmd.ExecuteReader().Close();
@@ -246,14 +251,14 @@ namespace ITP_Project
             String sessionId = this.comboSessions.Text;
             String room = this.comboRooms.Text;
 
-            if ( sessionId == "" || room  == "" )
+            if (sessionId == "" || room == "")
             {
                 MessageBox.Show("Please select session and room!", "Invalid Data!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             MySqlConnection connect = new MySqlConnection(this.connectionString);
-            MySqlCommand cmd = new MySqlCommand("INSERT INTO session_rooms VALUES (NULL, "+ sessionId + ", '" + room + "')");
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO session_rooms VALUES (NULL, " + sessionId + ", '" + room + "')");
             cmd.Connection = connect;
             connect.Open();
             cmd.ExecuteReader().Close();
@@ -271,10 +276,10 @@ namespace ITP_Project
 
             DialogResult dr = MessageBox.Show("Do you want to remove this record?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            if ( dr != DialogResult.Yes )
+            if (dr != DialogResult.Yes)
             {
                 return;
-            } 
+            }
 
             MySqlConnection connect = new MySqlConnection(this.connectionString);
             MySqlCommand cmd = new MySqlCommand("DELETE FROM session_rooms WHERE id = " + currectRecordId);
@@ -321,14 +326,14 @@ namespace ITP_Project
             string day = this.selectDay.Text;
             string timeSlots = this.selectSlot.Text;
 
-            if ( room == "" || day == "" || timeSlots == "")
+            if (room == "" || day == "" || timeSlots == "")
             {
                 MessageBox.Show("Please select Room, Day and Timeslot.", "Invalid!");
                 return;
             }
 
             MySqlConnection connect = new MySqlConnection(this.connectionString);
-            MySqlCommand cmd = new MySqlCommand("INSERT INTO room_non_available_time VALUES (NULL, '"+ room +"', '"+ day +"', '"+ timeSlots + "')");
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO room_non_available_time VALUES (NULL, '" + room + "', '" + day + "', '" + timeSlots + "')");
             cmd.Connection = connect;
             connect.Open();
             cmd.ExecuteReader().Close();
