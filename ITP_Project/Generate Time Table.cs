@@ -191,7 +191,7 @@ namespace ITP_Project
             Config config = new Config();
             MySqlConnection connect = new MySqlConnection(config.connectionString);
 
-            MySqlCommand cmd = new MySqlCommand("SELECT s.*, sr.room FROM sessions s INNER JOIN session_rooms sr ON sr.session_id = s.id WHERE s.group_id = '" + group + "'");
+            MySqlCommand cmd = new MySqlCommand("SELECT s.*, sr.room FROM sessions s INNER JOIN session_rooms sr ON sr.session_id = s.id WHERE s.group = '" + group + "'");
             cmd.Connection = connect;
             connect.Open();
 
